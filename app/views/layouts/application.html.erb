@@ -11,6 +11,39 @@
   </head>
 
   <body>
+    <nav class="navbar bg-base-100">
+      <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-xl" href="/">Tailwind App</a>
+      </div>
+      <div class="flex-none">
+        <ul class="menu menu-horizontal px-1">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
     <%= yield %>
+    <footer class="footer p-10 bg-base-200 text-base-content">
+      <div>
+        <span class="footer-title">Services</span>
+        <a class="link link-hover" href="#">Branding</a>
+        <a class="link link-hover" href="#">Design</a>
+        <a class="link link-hover" href="#">Marketing</a>
+        <a class="link link-hover" href="#">Advertisement</a>
+      </div>
+      <div>
+        <span class="footer-title">Company</span>
+        <a class="link link-hover" href="#">About us</a>
+        <a class="link link-hover" href="#">Contact</a>
+        <a class="link link-hover" href="#">Jobs</a>
+        <a class="link link-hover" href="#">Press kit</a>
+      </div>
+      <div>
+        <span class="footer-title">Legal</span>
+        <a class="link link-hover" href="#">Terms of use</a>
+        <a class="link link-hover" href="#">Privacy policy</a>
+        <a class="link link-hover" href="#">Cookie policy</a>
+      </div>
   </body>
 </html>
