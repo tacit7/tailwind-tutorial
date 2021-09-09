@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<%= content_tag :html, "data-theme": cookies[:theme] do %>
   <head>
     <title>Tailwind</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -16,10 +17,12 @@
         <a class="btn btn-ghost normal-case text-xl" href="/">Tailwind App</a>
       </div>
       <div class="flex-none">
-        <ul class="menu menu-horizontal px-1">
+        <ul class="menu menu-horizontal px-1" data-controller="theme-selector"  >
           <li><a href="/">Home</a></li>
           <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+          <li><%= link_to current_theme, "#", "data-theme": current_theme,  "data-action": "click->theme-selector#change" %>
+          </li>
         </ul>
       </div>
     </nav>
@@ -46,4 +49,5 @@
         <a class="link link-hover" href="#">Cookie policy</a>
       </div>
   </body>
+  <% end %>
 </html>
