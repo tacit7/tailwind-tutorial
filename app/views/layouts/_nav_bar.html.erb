@@ -1,0 +1,14 @@
+ <nav class="navbar bg-base-100">
+   <div class="flex-1">
+     <a class="btn btn-ghost normal-case text-xl" href="/">Tailwind App</a>
+   </div>
+   <div class="flex-none">
+     <ul class="menu menu-horizontal px-1" data-controller="theme-selector"  >
+       <li><a href="/">Home</a></li>
+       <li><a href="/about">About</a></li>
+       <li><a href="/contact">Contact Us</a></li>
+       <li><%= link_to current_theme, "#", "data-theme": current_theme,  "data-action": "click->theme-selector#change" %>
+       </li>
+     </ul>
+   </div>
+ </nav>
